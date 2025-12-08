@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Rhythm Catcher</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <!-- 主畫布 -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- HUD 顯示 -->
+    <div class="hud">
+      <div class="hud-item">
+        <span class="hud-label">Score</span>
+        <span class="hud-value" id="score">0000</span>
+      </div>
+      <button class="pause-btn" id="pauseBtn" title="暫停 (ESC)">
+        <i class="fa-solid fa-pause pause-icon"></i>
+        <i class="fa-solid fa-play play-icon"></i>
+      </button>
+      <div class="hud-item">
+        <span class="hud-label">Combo</span>
+        <span class="hud-value combo" id="combo">x0</span>
+      </div>
+    </div>
+
+    <!-- 暫停畫面 -->
+    <div class="pause-screen hidden" id="pauseScreen">
+      <div class="pause-content">
+        <h2 class="pause-title">遊戲暫停</h2>
+        <p class="pause-hint">按 ESC 或空白鍵繼續</p>
+        <button class="resume-btn" id="resumeBtn">繼續遊戲</button>
+      </div>
+    </div>
+
+    <!-- 開始畫面 -->
+    <div class="start-screen" id="startScreen">
+      <h1 class="title">AR Rhythm Catcher</h1>
+      <p class="subtitle">
+        揮動你的手，捕捉從天而降的發光音符！
+      </p>
+
+      <!-- 音色選擇 -->
+      <div class="sound-selector">
+        <p class="selector-label">選擇音色</p>
+        <div class="sound-options" id="soundOptions">
+          <button class="sound-option active" data-preset="marimba" title="馬林琴">
+            <i class="fa-solid fa-drum sound-icon"></i>
+            <span class="sound-name">馬林琴</span>
+          </button>
+          <button class="sound-option" data-preset="piano" title="鋼琴">
+            <i class="fa-solid fa-music sound-icon"></i>
+            <span class="sound-name">鋼琴</span>
+          </button>
+          <button class="sound-option" data-preset="chime" title="風鈴">
+            <i class="fa-solid fa-bell sound-icon"></i>
+            <span class="sound-name">風鈴</span>
+          </button>
+          <button class="sound-option" data-preset="synth" title="電子">
+            <i class="fa-solid fa-sliders sound-icon"></i>
+            <span class="sound-name">電子</span>
+          </button>
+          <button class="sound-option" data-preset="retro" title="8-bit">
+            <i class="fa-solid fa-gamepad sound-icon"></i>
+            <span class="sound-name">8-bit</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="start-btn" id="startBtn">開始遊戲</button>
+      <div class="instructions">
+        <p><span class="highlight">揮手</span> 接住下落的音符</p>
+        <p>連續接住可獲得 <span class="highlight">Combo 加成</span></p>
+        <p>難度提升時，音樂會更加<span class="highlight">急促</span></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 AR Rhythm Catcher | AI Coding By 子超
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

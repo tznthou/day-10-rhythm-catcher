@@ -1,4 +1,4 @@
-# AR Rhythm Catcher
+# Rhythm Catcher 體感節奏捕捉遊戲
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Live Demo](https://img.shields.io/badge/Demo-Live-blue.svg)](https://tznthou.github.io/day-10-rhythm-catcher/)
@@ -8,7 +8,7 @@
 
 > 體感節奏捕捉遊戲 — 揮動你的手，捕捉發光的音符
 
-[← 回到 Muripo HQ](https://tznthou.github.io/muripo-hq/)
+[← 回到 Muripo HQ](https://tznthou.github.io/muripo-hq/) | [English](README_EN.md)
 
 ---
 
@@ -302,3 +302,9 @@ flowchart LR
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 作者
+
+子超 - [tznthou@gmail.com](mailto:tznthou@gmail.com)
